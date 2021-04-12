@@ -1,0 +1,13 @@
+body {
+    background-color: black;
+    color: powderblue;
+    text-align: center;
+}
+
+ol {
+    list-style: inside;
+}
+
+.special {
+    color: salmon;
+}
