@@ -55,7 +55,7 @@ class Skeleton extends Component {
           <li>Implement a timer</li>
           <li>Style things along the way</li>
           <li>Make + add a favicon at the path client/dist/favicon.ico</li>
-          <button onclick="hello()"> 
+          <button onClick={this.hello}> 
             this button is trying to access the hello() function but it's not working -_-
           </button>
           <p id="20sec">
