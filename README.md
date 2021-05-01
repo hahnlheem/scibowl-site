@@ -15,6 +15,16 @@ To initialize, run ```npm install``` to install ```node_modules``` (do this only
 - Change the Database Name for MongoDB (server.js)
 - Add a favicon to your website at the path client/dist/favicon.ico
 
+## THINGS WE WANT TO DO FROM NOW IN THE NEAR FUTURE
+
+- Button that resets timer
+- Format clock well
+- Understand how CSS works
+- Add a tossup timer
+- Add stopping button that interrupts timer
+- Basic Scoring System (+4,+10,-4,-10), maybe manually edit score
+- keyboard shortcuts for starting things
+
 ## don't touch
 
 the following files students do not need to edit. feel free to read them if you would like.
