@@ -36,22 +36,18 @@ class Skeleton extends Component {
             onFailure={(err) => console.log(err)}
           />
         )}
-        <h1>Good luck on your project :)</h1>
-        <h2> What we provide in this skeleton</h2>
+        <h1>Science Bowl Portal</h1>
+        <h2> Things to do</h2>
         <ul>
-          <li>Google Auth (Skeleton.js & auth.js)</li>
-          <li>Socket Infrastructure (client-socket.js & server-socket.js)</li>
-          <li>User Model (auth.js & user.js)</li>
-        </ul>
-        <h2> What you need to change</h2>
-        <ul>
-          <li>Change the font in utilities.css</li>
-          <li>Change the Frontend CLIENT_ID for Google Auth (Skeleton.js)</li>
-          <li>Change the Server CLIENT_ID for Google Auth (auth.js)</li>
-          <li>Change the Database SRV for Atlas (server.js)</li>
-          <li>Change the Database Name for MongoDB (server.js)</li>
-          <li>Add a favicon to your website at the path client/dist/favicon.ico</li>
-          <li>Update website title in client/dist/index.html</li>
+          <li>Figure out how to actually make <code>hotloader</code> work (seems like some issues with auth servers?)</li>
+          <ul>
+            <li>Edit: jk seems to work now? But still need to do bottom two</li>
+            <li>Change the Frontend CLIENT_ID for Google Auth (Skeleton.js)</li>
+            <li>Change the Server CLIENT_ID for Google Auth (auth.js)</li>
+          </ul>
+          <li>Implement a timer</li>
+          <li>Style things along the way</li>
+          <li>Make + add a favicon at the path client/dist/favicon.ico</li>
         </ul>
       </>
     );
