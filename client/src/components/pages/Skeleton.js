@@ -19,6 +19,10 @@ class Skeleton extends Component {
     // remember -- api calls go here!
   }
 
+  hello() {
+    alert("YEEHAW");
+  }
+
   render() {
     return (
       <>
@@ -51,6 +55,12 @@ class Skeleton extends Component {
           <li>Implement a timer</li>
           <li>Style things along the way</li>
           <li>Make + add a favicon at the path client/dist/favicon.ico</li>
+          <button onclick="hello()"> 
+            this button is trying to access the hello() function but it's not working -_-
+          </button>
+          <p id="20sec">
+            20
+          </p>
         </ul>
         <Link to="/testy">goes to testy?</Link>
       </>
