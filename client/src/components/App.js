@@ -8,6 +8,7 @@ import "../utilities.css";
 import { socket } from "../client-socket.js";
 
 import { get, post } from "../utilities";
+import Testy from "./pages/Testy.js";
 
 /**
  * Define the "App" component as a class.
@@ -54,6 +55,7 @@ class App extends Component {
             handleLogout={this.handleLogout}
             userId={this.state.userId}
           />
+          <Testy path="/testy"/>
           <NotFound default />
         </Router>
       </>

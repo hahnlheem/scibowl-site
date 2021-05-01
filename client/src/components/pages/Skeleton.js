@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import GoogleLogin, { GoogleLogout } from "react-google-login";
+import { Link } from "@reach/router";
 
 import "../../utilities.css";
 import "./Skeleton.css";
@@ -37,7 +38,9 @@ class Skeleton extends Component {
           />
         )}
         <h1>give me all ur UWUWUWUWUWUWUWWUWUUWUWUWUWU</h1>
-        <h2>Things to do! SKSKSOTSKNSKOESNKNSTSONEKTNKOSNTEHKSNTKHSQJKTHQSNTHKSNTHSN</h2>
+        <h2>Things to do!</h2>
+
+        <h2>asdf</h2>
         <ul>
           <li>Figure out how to actually make <code>hotloader</code> work (seems like some issues with auth servers?)</li>
           <ul>
@@ -49,6 +52,7 @@ class Skeleton extends Component {
           <li>Style things along the way</li>
           <li>Make + add a favicon at the path client/dist/favicon.ico</li>
         </ul>
+        <Link to="/testy">goes to testy?</Link>
       </>
     );
   }
