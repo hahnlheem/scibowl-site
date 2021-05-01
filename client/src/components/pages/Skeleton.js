@@ -36,8 +36,8 @@ class Skeleton extends Component {
             onFailure={(err) => console.log(err)}
           />
         )}
-        <h1>Good luck on your project :) UWUWUWUWUWUWUWWUWUUWUWUWUWU</h1>
-        <h2> What we provide in this skeleton</h2>
+        <h1>give me all ur UWUWUWUWUWUWUWWUWUUWUWUWUWU</h1>
+        <h2>Things to do!</h2>
         <ul>
           <li>Figure out how to actually make <code>hotloader</code> work (seems like some issues with auth servers?)</li>
           <ul>
