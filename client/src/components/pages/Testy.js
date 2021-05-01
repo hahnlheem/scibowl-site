@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
+import Clock from "../modules/Clock.js";
 
 import "../../utilities.css";
 import "./Testy.css";
@@ -56,6 +57,7 @@ class Testy extends Component {
       </h1>
       <button onClick={this.increaseBy1}>Start Bonus</button>
       <button onClick={this.decreaseBy1}>Stop Bonus</button>
+      <Clock/>
       </>
     );
   }
