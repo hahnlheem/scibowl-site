@@ -36,7 +36,8 @@ class Skeleton extends Component {
             onFailure={(err) => console.log(err)}
           />
         )}
-        <h1>Good luck on your project :)</h1>
+        <big> HAHHNNNNNNNNNNNNNNNNNNN JUNGGGGGGGGGGGGGGGGGG LHEEEEEEEEEEEEEEEEEEEEEEEEEEEMMM</big>
+        <h1>Good luck on your project :) UWUWUWUWUWUWUWWUWUUWUWUWUWU</h1>
         <h2> What we provide in this skeleton</h2>
         <ul>
           <li>Google Auth (Skeleton.js & auth.js)</li>
