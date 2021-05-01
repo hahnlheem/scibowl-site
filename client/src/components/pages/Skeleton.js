@@ -58,9 +58,7 @@ class Skeleton extends Component {
           <button onClick={this.hello}> 
             this button is trying to access the hello() function but it's not working -_-
           </button>
-          <p id="20sec">
-            20
-          </p>
+          
         </ul>
         <Link to="/testy">goes to testy?</Link>
       </>
