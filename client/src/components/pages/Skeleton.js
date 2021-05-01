@@ -37,7 +37,7 @@ class Skeleton extends Component {
           />
         )}
         <h1>give me all ur UWUWUWUWUWUWUWWUWUUWUWUWUWU</h1>
-        <h2>Things to do!</h2>
+        <h2>Things to do! SKSKSOTSKNSKOESNKNSTSONEKTNKOSNTEHKSNTKHSQJKTHQSNTHKSNTHSN</h2>
         <ul>
           <li>Figure out how to actually make <code>hotloader</code> work (seems like some issues with auth servers?)</li>
           <ul>
