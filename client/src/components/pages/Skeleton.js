@@ -3,7 +3,6 @@ import GoogleLogin, { GoogleLogout } from "react-google-login";
 import { Link } from "@reach/router";
 
 import "../../utilities.css";
-import "./Skeleton.css";
 
 //TODO: REPLACE WITH YOUR OWN CLIENT_ID
 const GOOGLE_CLIENT_ID = "121479668229-t5j82jrbi9oejh7c8avada226s75bopn.apps.googleusercontent.com";
@@ -25,7 +24,7 @@ class Skeleton extends Component {
 
   render() {
     return (
-      <>
+      <div>
         {this.props.userId ? (
           <GoogleLogout
             clientId={GOOGLE_CLIENT_ID}
@@ -42,6 +41,7 @@ class Skeleton extends Component {
           />
         )}
         <h1>give me all ur UWUWUWUWUWUWUWWUWUUWUWUWUWU</h1>
+        <body>
         <h2>Things to do!</h2>
 
         <h2>asdf</h2>
@@ -61,7 +61,8 @@ class Skeleton extends Component {
           
         </ul>
         <Link to="/testy">goes to testy?</Link>
-      </>
+        </body>
+      </div>
     );
   }
 }
