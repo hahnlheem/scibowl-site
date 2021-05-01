@@ -4,7 +4,7 @@ Time- and score-keeping site for Science Bowl teams, with searchable database of
 
 Follow https://github.com/weblab-workshops/skeleton for correct implementation (most should have already been followed). Thanks to MIT web.lab for providing this skeleton.
 
-To initialize, run ```npm install``` to install ```node_modules```, then use ```npm run hotloader``` and open webapp on ```localhost:5000```. (Port can be edited if really want.)
+To initialize, run ```npm install``` to install ```node_modules``` (do this only once). After, run ```npm run hotloader``` and open webapp on ```localhost:5000```. (Port can be edited if really want.)
 
 ## Things to change
 
