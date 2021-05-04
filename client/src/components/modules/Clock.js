@@ -18,6 +18,7 @@ class Clock extends Component {
 
   
     tick() {
+        this.state.n = 20;
         this.interval = setInterval(() => {
             if (this.state.n>0) {
                 this.setState(prevState => ({

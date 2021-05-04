@@ -18,6 +18,7 @@ To initialize, run ```npm install``` to install ```node_modules``` (do this only
 ## THINGS WE WANT TO DO FROM NOW IN THE NEAR FUTURE
 
 - Button that resets timer
+- right now, double clicking the timer makes it count down twice. There should be no effect when you press start bonus after start bonus is already running
 - Format clock well
 - Understand how CSS works
 - Add a tossup timer
