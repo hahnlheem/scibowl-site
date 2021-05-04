@@ -48,7 +48,7 @@ class Testy extends Component {
 
   render() {
     return (
-      <>
+      <div className="std-blue">
       <Link to="/">hopefully this brings us to main page</Link>
 
 
@@ -58,7 +58,7 @@ class Testy extends Component {
       <button onClick={this.increaseBy1}>Start Bonus</button>
       <button onClick={this.decreaseBy1}>Stop Bonus</button>
       <Clock/>
-      </>
+      </div>
     );
   }
 }

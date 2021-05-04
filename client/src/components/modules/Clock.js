@@ -30,7 +30,7 @@ class Clock extends Component {
   
     render() {
       return (
-        <div>
+        <div class="container">
           <h1>YEET HAW</h1>
           <h2>THE TIME IS CURRENTLY {this.state.n}.</h2>
           <button onClick={this.tick} type="button" class="btn btn-primary">Start Bonus</button>

@@ -41,27 +41,27 @@ class Skeleton extends Component {
           />
         )}
         <h1>website in progress :D</h1>
-        <body>
-        <h2>Things to do!</h2>
+        <div className="std-blue">
+          <h2>Things to do!</h2>
 
-        <h2>asdf</h2>
-        <ul>
-          <li>Figure out how to actually make <code>hotloader</code> work (seems like some issues with auth servers?)</li>
+          <h2>asdf</h2>
           <ul>
-            <li>Edit: jk seems to work now? But still need to do bottom two</li>
-            <li>Change the Frontend CLIENT_ID for Google Auth (Skeleton.js)</li>
-            <li>Change the Server CLIENT_ID for Google Auth (auth.js)</li>
+            <li>Figure out how to actually make <code>hotloader</code> work (seems like some issues with auth servers?)</li>
+            <ul>
+              <li>Edit: jk seems to work now? But still need to do bottom two</li>
+              <li>Change the Frontend CLIENT_ID for Google Auth (Skeleton.js)</li>
+              <li>Change the Server CLIENT_ID for Google Auth (auth.js)</li>
+            </ul>
+            <li>Implement a timer</li>
+            <li>Style things along the way</li>
+            <li>Make + add a favicon at the path client/dist/favicon.ico</li>
+            <button onClick={this.hello}> 
+              this button is trying to access the hello() function but it's not working -_-
+            </button>
+            
           </ul>
-          <li>Implement a timer</li>
-          <li>Style things along the way</li>
-          <li>Make + add a favicon at the path client/dist/favicon.ico</li>
-          <button onClick={this.hello}> 
-            this button is trying to access the hello() function but it's not working -_-
-          </button>
-          
-        </ul>
-        <Link to="/testy">goes to testy?</Link>
-        </body>
+          <Link to="/testy">goes to testy?</Link>
+        </div>
       </div>
     );
   }
