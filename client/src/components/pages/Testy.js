@@ -49,15 +49,15 @@ class Testy extends Component {
   render() {
     return (
       <div className="std-blue">
-      <Link to="/">hopefully this brings us to main page</Link>
+        <Link to="/">hopefully this brings us to main page</Link>
 
 
-      <h1 id="20sec">
-        {this.state.numSeconds}
-      </h1>
-      <button onClick={this.increaseBy1}>Start Bonus</button>
-      <button onClick={this.decreaseBy1}>Stop Bonus</button>
-      <Clock/>
+        <h1 id="20sec">
+          {this.state.numSeconds}
+        </h1>
+        <button onClick={this.increaseBy1}>Start Bonus</button>
+        <button onClick={this.decreaseBy1}>Stop Bonus</button>
+        <Clock/>
       </div>
     );
   }
