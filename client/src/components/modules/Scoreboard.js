@@ -73,7 +73,22 @@ class Scoreboard extends Component {
         teamB : this.state.teamB - 10
       })
     }
-  
+    resetA = () => {
+      this.setState({
+        teamA : 0
+      })
+    }
+    resetB = () => {
+      this.setState({
+        teamB : 0
+      })
+    }
+    resetScores = () => {
+      this.setState({
+        teamA : 0,
+        teamB : 0
+      })
+    }
     render() {
       return (
         <div class = "container">
@@ -82,11 +97,16 @@ class Scoreboard extends Component {
           <button onClick={this.decreaseBy4A} type="button" class="btn btn-primary">-4</button>
           <button onClick={this.increaseBy10A} type="button" class="btn btn-primary">+10</button>
           <button onClick={this.decreaseBy10A} type="button" class="btn btn-primary">-10</button>
+          {/* <button onClick={this.resetA} type="button" class="btn btn-warning">Reset Team A</button> */}
           <h2>Team B Score: {this.state.teamB}</h2>
           <button onClick={this.increaseBy4B} type="button" class="btn btn-primary">+4</button>
           <button onClick={this.decreaseBy4B} type="button" class="btn btn-primary">-4</button>
           <button onClick={this.increaseBy10B} type="button" class="btn btn-primary">+10</button>
           <button onClick={this.decreaseBy10B} type="button" class="btn btn-primary">-10</button>
+          {/* <button onClick={this.resetB} type="button" class="btn btn-warning">Reset Team B</button> */}
+          <br>
+          </br>
+          <button onClick={this.resetScores} type="button" class="btn btn-warning">Reset Scores</button>
         </div>
       );
     }
