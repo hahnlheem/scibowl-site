@@ -33,8 +33,8 @@ class Clock extends Component {
         <div>
           <h1>YEET HAW</h1>
           <h2>THE TIME IS CURRENTLY {this.state.n}.</h2>
-          <button onClick={this.tick}>Start Bonus</button>
-          <button onClick={this.decreaseBy1}>Stop Bonus</button>
+          <button onClick={this.tick} type="button" class="btn btn-primary">Start Bonus</button>
+          <button onClick={this.decreaseBy1} type="button" class="btn btn-danger">Stop Bonus</button>
         </div>
       );
     }

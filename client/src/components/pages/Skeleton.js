@@ -40,7 +40,7 @@ class Skeleton extends Component {
             onFailure={(err) => console.log(err)}
           />
         )}
-        <h1>give me all ur UWUWUWUWUWUWUWWUWUUWUWUWUWU</h1>
+        <h1>website in progress :D</h1>
         <body>
         <h2>Things to do!</h2>
 
