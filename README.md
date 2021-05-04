@@ -24,6 +24,7 @@ To initialize, run ```npm install``` to install ```node_modules``` (do this only
 - Add a tossup timer
 - Add stopping button that interrupts timer
 - Basic Scoring System (+4,+10,-4,-10), maybe manually edit score
+- Create a table that keeps track of problem number
 - keyboard shortcuts for starting things
 
 ## don't touch
