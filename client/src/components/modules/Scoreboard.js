@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { Link } from "@reach/router";
+import Editable from "../Editable"
 
 class Scoreboard extends Component {
     constructor(props) {
@@ -8,6 +9,8 @@ class Scoreboard extends Component {
           teamA: 0,
           teamB: 0,
       }
+      // this.task = useState("");
+      // this.setTask = useState("");
     }
   
     // componentDidMount() {
@@ -89,6 +92,8 @@ class Scoreboard extends Component {
         teamB : 0
       })
     }
+
+
     render() {
       return (
         <div class = "container">
@@ -107,7 +112,21 @@ class Scoreboard extends Component {
           <br>
           </br>
           <button onClick={this.resetScores} type="button" class="btn btn-warning">Reset Scores</button>
+          {/* <Editable
+            text={this.task}
+            placeholder="Write a task name"
+            type="input"
+          >
+            <input
+              type="text"
+              name="task"
+              placeholder="Write a task name"
+              value={this.task}
+              onChange={e => this.setTask(e.target.value)}
+            />
+          </Editable> */}
         </div>
+        
       );
     }
   }

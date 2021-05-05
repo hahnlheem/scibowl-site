@@ -9,6 +9,7 @@ import { socket } from "../client-socket.js";
 
 import { get, post } from "../utilities";
 import Testy from "./pages/Testy.js";
+import Editable from "./Editable";
 
 /**
  * Define the "App" component as a class.

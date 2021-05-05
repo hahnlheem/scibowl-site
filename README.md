@@ -26,6 +26,7 @@ To initialize, run ```npm install``` to install ```node_modules``` (do this only
 - Basic Scoring System (+4,+10,-4,-10), maybe manually edit score
 - Create a table that keeps track of problem number
 - keyboard shortcuts for starting things
+- somehow create a buzzing system
 
 ## don't touch
 
