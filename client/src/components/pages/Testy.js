@@ -23,10 +23,8 @@ class Testy extends Component {
 
   render() {
     return (
-      <div className="std-blue">
-        <Link to="/">hopefully this brings us to main page</Link>
+      <div className="main-div">
 
-        
         <Clock/>
         <Scoreboard/>
       </div>

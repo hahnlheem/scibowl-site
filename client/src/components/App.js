@@ -4,6 +4,7 @@ import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
 
 import "../utilities.css";
+import "./App.css";
 
 import { socket } from "../client-socket.js";
 
@@ -49,16 +50,20 @@ class App extends Component {
   render() {
     return (
       <>
-        <Router>
-          <Skeleton
-            path="/"
-            handleLogin={this.handleLogin}
-            handleLogout={this.handleLogout}
-            userId={this.state.userId}
-          />
-          <Testy path="/testy"/>
-          <NotFound default />
-        </Router>
+        <NavBar />
+        <div className="App-container">
+          <Router>
+            <Skeleton
+              path="/"
+              handleLogin={this.handleLogin}
+              handleLogout={this.handleLogout}
+              userId={this.state.userId}
+            />
+            <Testy path="/testy"/>
+            <NotFound default />
+          </Router>
+        </div>
+        
       </>
     );
   }
