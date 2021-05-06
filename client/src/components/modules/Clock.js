@@ -31,9 +31,9 @@ class Clock extends Component {
   
     render() {
       return (
-        <div class="container">
-          <h1>YEET HAW</h1>
-          <h2>THE TIME IS CURRENTLY {this.state.n}.</h2>
+        <div className="full-page">
+          <h1>random text</h1>
+          <h2>Countdown: {this.state.n}.</h2>
           <button onClick={this.tick} type="button" class="btn btn-primary">Start Bonus</button>
           <button onClick={this.decreaseBy1} type="button" class="btn btn-danger">Stop Bonus</button>
         </div>
