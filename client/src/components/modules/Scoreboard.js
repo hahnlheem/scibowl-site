@@ -120,10 +120,10 @@ class Scoreboard extends Component {
            </div> 
           {/* <button onClick={this.resetA} type="button" class="btn btn-warning">Reset Team A</button> */}
           <h2>Team B Score: {this.state.teamB}</h2>
-          <button onClick={this.increaseBy4B} type="button" class="btn btn-primary">+4</button>
-          <button onClick={this.decreaseBy4B} type="button" class="btn btn-primary">-4</button>
-          <button onClick={this.increaseBy10B} type="button" class="btn btn-primary">+10</button>
-          <button onClick={this.decreaseBy10B} type="button" class="btn btn-primary">-10</button>
+          <button onClick={this.increaseBy4B} type="button" class="btn btn-primary score-button">+4</button>
+          <button onClick={this.decreaseBy4B} type="button" class="btn btn-primary score-button">-4</button>
+          <button onClick={this.increaseBy10B} type="button" class="btn btn-primary score-button">+10</button>
+          <button onClick={this.decreaseBy10B} type="button" class="btn btn-primary score-button">-10</button>
           {/* <button onClick={this.resetB} type="button" class="btn btn-warning">Reset Team B</button> */}
           <br>
           </br>
