@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "@reach/router";
 import Clock from "../modules/Clock.js";
 import Scoreboard from "../modules/Scoreboard.js";
-import NavBar from "../modules/NavBar.js";
 
 import "../../utilities.css";
 import "./Testy.css";
@@ -25,7 +24,6 @@ class Testy extends Component {
   render() {
     return (
       <>
-        {/* <NavBar /> */}
         <div className="main-div">
 
           <Clock/>
