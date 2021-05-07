@@ -13,5 +13,12 @@
 .teamScore {
     display: inline-block;
     width: 80%;
+    border-color: black;
 }
 
+.full-page {
+    width: 100%;
+    margin: auto;
+    border-color: black; /* WHY IS THIS NOT SHOWING UP */
+    border-width: 10px; /* AND THIS */
+}

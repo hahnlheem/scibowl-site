@@ -78,16 +78,6 @@ class Scoreboard extends Component {
         teamB : this.state.teamB - 10
       })
     }
-    resetA = () => {
-      this.setState({
-        teamA : 0
-      })
-    }
-    resetB = () => {
-      this.setState({
-        teamB : 0
-      })
-    }
     resetScores = () => {
       this.setState({
         teamA : 0,
@@ -98,7 +88,7 @@ class Scoreboard extends Component {
 
     render() {
       return (
-        <div class="u-inlineBlock center">
+        <span className="full-page">
           <div className="teamScore">
             <h2>Team A Score: {this.state.teamA}</h2>
             <div className="u-inlineBlock center">
@@ -108,7 +98,6 @@ class Scoreboard extends Component {
                 <button onClick={this.decreaseBy10A} type="button" class="btn btn-primary score-button">-10</button>
             </div>
           </div> 
-          {/* <button onClick={this.resetA} type="button" class="btn btn-warning">Reset Team A</button> */}
           <div className="teamScore">
             <h2>Team B Score: {this.state.teamB}</h2>
             <div className="center">
@@ -118,7 +107,6 @@ class Scoreboard extends Component {
               <button onClick={this.decreaseBy10B} type="button" class="btn btn-primary score-button">-10</button>
             </div>
           </div>
-          {/* <button onClick={this.resetB} type="button" class="btn btn-warning">Reset Team B</button> */}
           <br>
           </br>
           <button onClick={this.resetScores} type="button" class="btn btn-warning">Reset Scores</button>
@@ -135,7 +123,7 @@ class Scoreboard extends Component {
               onChange={e => this.setTask(e.target.value)}
             />
           </Editable> */}
-        </div>
+        </span>
         
       );
     }
