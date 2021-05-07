@@ -10,3 +10,8 @@
     margin: auto;
 }
 
+.teamScore {
+    display: inline-block;
+    width: 80%;
+}
+

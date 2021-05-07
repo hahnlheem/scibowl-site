@@ -98,33 +98,25 @@ class Scoreboard extends Component {
 
     render() {
       return (
-        <div class = "container">
-          <h2>Team A Score: {this.state.teamA}</h2>
-          <div className="u-inlineBlock center">
-            <button onClick={this.increaseBy4A} type="button" className="btn btn-primary score-button">+4</button>
-            <button onClick={this.decreaseBy4A} type="button" class="btn btn-primary score-button">-4</button>
-            <button onClick={this.increaseBy10A} type="button" class="btn btn-primary score-button">+10</button>
-            <button onClick={this.decreaseBy10A} type="button" class="btn btn-primary score-button">-10</button>
-            {/* <div className="score-button">
-                <button onClick={this.increaseBy4A} type="button" class="btn btn-primary">+4</button>
+        <div class="u-inlineBlock center">
+          <div className="teamScore">
+            <h2>Team A Score: {this.state.teamA}</h2>
+            <div className="u-inlineBlock center">
+                <button onClick={this.increaseBy4A} type="button" className="btn btn-primary score-button">+4</button>
+                <button onClick={this.decreaseBy4A} type="button" class="btn btn-primary score-button">-4</button>
+                <button onClick={this.increaseBy10A} type="button" class="btn btn-primary score-button">+10</button>
+                <button onClick={this.decreaseBy10A} type="button" class="btn btn-primary score-button">-10</button>
             </div>
-            <div className="score-button">
-                <button onClick={this.decreaseBy4A} type="button" class="btn btn-primary">-4</button>
-            </div>
-            <div className="score-button">
-                <button onClick={this.increaseBy10A} type="button" class="btn btn-primary">+10</button>
-            </div>
-            <div className="score-button">
-                <button onClick={this.decreaseBy10A} type="button" class="btn btn-primary">-10</button>
-            </div> */}
-           </div> 
+          </div> 
           {/* <button onClick={this.resetA} type="button" class="btn btn-warning">Reset Team A</button> */}
-          <h2>Team B Score: {this.state.teamB}</h2>
-          <div className="center">
-            <button onClick={this.increaseBy4B} type="button" class="btn btn-primary score-button">+4</button>
-            <button onClick={this.decreaseBy4B} type="button" class="btn btn-primary score-button">-4</button>
-            <button onClick={this.increaseBy10B} type="button" class="btn btn-primary score-button">+10</button>
-            <button onClick={this.decreaseBy10B} type="button" class="btn btn-primary score-button">-10</button>
+          <div className="teamScore">
+            <h2>Team B Score: {this.state.teamB}</h2>
+            <div className="center">
+              <button onClick={this.increaseBy4B} type="button" class="btn btn-primary score-button">+4</button>
+              <button onClick={this.decreaseBy4B} type="button" class="btn btn-primary score-button">-4</button>
+              <button onClick={this.increaseBy10B} type="button" class="btn btn-primary score-button">+10</button>
+              <button onClick={this.decreaseBy10B} type="button" class="btn btn-primary score-button">-10</button>
+            </div>
           </div>
           {/* <button onClick={this.resetB} type="button" class="btn btn-warning">Reset Team B</button> */}
           <br>
