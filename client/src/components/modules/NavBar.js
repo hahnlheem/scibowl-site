@@ -14,7 +14,7 @@ class NavBar extends Component {
   render() {
     return (
       <nav className="NavBar-container">
-        <div className="NavBar-title u-inlineBlock">Catbook</div>
+        <div className="NavBar-title u-inlineBlock">Scibowl Site</div>
         <div className="NavBar-linkContainer u-inlineBlock">
           <Link to="/" className="NavBar-link">
             Home

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Router } from "@reach/router";
 import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
+import Testy from "./pages/Testy.js";
+import NavBar from "./modules/NavBar.js";
 
 import "../utilities.css";
 import "./App.css";
@@ -9,7 +11,7 @@ import "./App.css";
 import { socket } from "../client-socket.js";
 
 import { get, post } from "../utilities";
-import Testy from "./pages/Testy.js";
+
 import Editable from "./Editable";
 
 /**
