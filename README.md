@@ -8,18 +8,14 @@ To initialize, run ```npm install``` to install ```node_modules``` (do this only
 
 ## Things to implement!
 
-- Button that resets timer
-- right now, double clicking the timer makes it count down twice. There should be no effect when you press start bonus after start bonus is already running
 - Format clock well
 - Understand how CSS works
-- Add a tossup timer
-- Add stopping button that interrupts timer
-- Basic Scoring System (+4,+10,-4,-10), maybe manually edit score
+- Allow for manually editing score
 - Create a table that keeps track of problem number
 - keyboard shortcuts for starting things
-- somehow create a buzzing system
-- When we do buzzing, the buzz should pause the timer (for tossup and bonus), and the host, after being recognize, should release it.
 - Potential idea: have separate customizable settings that are seen at the beginning of a game
+
+Note that we won't deal with buzzer systems for now, as this site is largely for moderator use. (Good sites for buzzing include https://coba-cc.slapbowl.com/.
 
 ## Backburner
 
