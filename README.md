@@ -6,16 +6,7 @@ Follow https://github.com/weblab-workshops/skeleton for correct implementation (
 
 To initialize, run ```npm install``` to install ```node_modules``` (do this only once). After, run ```npm run hotloader``` and open webapp on ```localhost:5000```. (Port can be edited if really want.)
 
-## Things to change
-
-- Change the font in utilities.css
-- Change the Frontend CLIENT_ID for Google Auth (Skeleton.js)
-- Change the Server CLIENT_ID for Google Auth (auth.js)
-- Change the Database SRV for Atlas (server.js)
-- Change the Database Name for MongoDB (server.js)
-- Add a favicon to your website at the path client/dist/favicon.ico
-
-## THINGS WE WANT TO DO FROM NOW IN THE NEAR FUTURE
+## Things we want to implement!
 
 - Button that resets timer
 - right now, double clicking the timer makes it count down twice. There should be no effect when you press start bonus after start bonus is already running
@@ -27,6 +18,15 @@ To initialize, run ```npm install``` to install ```node_modules``` (do this only
 - Create a table that keeps track of problem number
 - keyboard shortcuts for starting things
 - somehow create a buzzing system
+- 
+## Backburner
+
+- Change the font in utilities.css
+- Change the Frontend CLIENT_ID for Google Auth (Skeleton.js)
+- Change the Server CLIENT_ID for Google Auth (auth.js)
+- Change the Database SRV for Atlas (server.js)
+- Change the Database Name for MongoDB (server.js)
+- Add a favicon to your website at the path client/dist/favicon.ico
 
 ## don't touch
 
