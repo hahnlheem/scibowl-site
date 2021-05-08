@@ -32,15 +32,16 @@ class Clock extends Component {
       }, 1000);
     }
 
-    pauseTimer = (e) => {
+    negPause = (e) => {
       this.setState(prevState => ({
-        isPaused: true
+        isPaused: !(this.state.isPaused)
       }));
     }
 
     startBonus = (e) => {
       this.setState({
-        isPaused: false
+        isPaused: false,
+        timeLeft: 20
       });
       if (!this.state.isStartPressed) {
         this.tick();
@@ -52,7 +53,23 @@ class Clock extends Component {
           isStartPressed: true
         });
       }
-      
+    }
+
+    startTossup = (e) => {
+      this.setState({
+        isPaused: false,
+        timeLeft: 5
+      });
+      if (!this.state.isStartPressed) {
+        this.tick();
+        this.setState({
+          isStartPressed: true
+        });
+      } else{
+        this.setState({
+          isStartPressed: true
+        });
+      }
     }
 
     setSeconds = (e) => {
@@ -60,6 +77,12 @@ class Clock extends Component {
         timeLeft: e.target.value
       });
     };
+
+    resetTimer = (e) => {
+      this.setState({
+        asdf
+      })
+    }
   
     render() {
       return (
@@ -69,8 +92,9 @@ class Clock extends Component {
           <div>
             <input type="text" onChange={ this.setSeconds } value={ this.state.timeLeft } />
           </div>
-          <button onClick={this.startBonus} type="button" class="btn btn-primary">Start Bonus</button>
-          <button onClick={this.pauseTimer} type="button" class="btn btn-danger">Stop Bonus</button>
+          <button onClick={this.startTossup} type="button" class="btn btn-primary">Start Tossup</button>
+          <button onClick={this.startBonus} type="button" class="btn btn-danger">Start Bonus</button>
+          <button onClick={this.negPause} type="button" class="btn btn-warning">Pause/Play</button>
         </div>
       );
     }
