@@ -19,6 +19,8 @@ To initialize, run ```npm install``` to install ```node_modules``` (do this only
 - keyboard shortcuts for starting things
 - somehow create a buzzing system
 - When we do buzzing, the buzz should pause the timer (for tossup and bonus), and the host, after being recognize, should release it.
+- Potential idea: have separate customizable settings that are seen at the beginning of a game
+
 ## Backburner
 
 - Change the font in utilities.css
