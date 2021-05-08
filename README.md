@@ -18,6 +18,15 @@ To initialize, run ```npm install``` to install ```node_modules``` (do this only
 - Create a table that keeps track of problem number
 - keyboard shortcuts for starting things
 - somehow create a buzzing system
+- 
+## Backburner
+
+- Change the font in utilities.css
+- Change the Frontend CLIENT_ID for Google Auth (Skeleton.js)
+- Change the Server CLIENT_ID for Google Auth (auth.js)
+- Change the Database SRV for Atlas (server.js)
+- Change the Database Name for MongoDB (server.js)
+- Add a favicon to your website at the path client/dist/favicon.ico
 
 ## Backburner
 
