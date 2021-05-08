@@ -7,6 +7,7 @@ class Clock extends Component {
       this.state = { 
         timeLeft: 20,
         isPaused: true,
+        isStartPressed: false,
       };
       this.tick = this.tick.bind(this);
     }
@@ -21,20 +22,37 @@ class Clock extends Component {
 
   
     tick() {
-        this.interval = setInterval(() => {
-            if (this.state.timeLeft > 0 && (this.state.isPaused)) {
-                this.setState(prevState => ({
-                    timeLeft: prevState.timeLeft-1
-                }));
-            }
-            
-        }, 1000);
+      this.interval = setInterval(() => {
+          if (this.state.timeLeft > 0 && !(this.state.isPaused)) {
+              this.setState(prevState => ({
+                  timeLeft: prevState.timeLeft-1
+              }));
+          }
+          
+      }, 1000);
     }
 
-    negPause = (e) => {
+    pauseTimer = (e) => {
       this.setState(prevState => ({
-        isPaused: !(this.state.isPaused)
+        isPaused: true
       }));
+    }
+
+    startBonus = (e) => {
+      this.setState({
+        isPaused: false
+      });
+      if (!this.state.isStartPressed) {
+        this.tick();
+        this.setState({
+          isStartPressed: true
+        });
+      } else{
+        this.setState({
+          isStartPressed: true
+        });
+      }
+      
     }
 
     setSeconds = (e) => {
@@ -51,8 +69,8 @@ class Clock extends Component {
           <div>
             <input type="text" onChange={ this.setSeconds } value={ this.state.timeLeft } />
           </div>
-          <button onClick={this.tick} type="button" class="btn btn-primary">Start Bonus</button>
-          <button onClick={this.negPause} type="button" class="btn btn-danger">Stop Bonus</button>
+          <button onClick={this.startBonus} type="button" class="btn btn-primary">Start Bonus</button>
+          <button onClick={this.pauseTimer} type="button" class="btn btn-danger">Stop Bonus</button>
         </div>
       );
     }
