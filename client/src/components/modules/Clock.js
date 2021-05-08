@@ -77,18 +77,12 @@ class Clock extends Component {
         timeLeft: e.target.value
       });
     };
-
-    resetTimer = (e) => {
-      this.setState({
-        asdf
-      })
-    }
   
     render() {
       return (
         <div className="full-page">
           <h1>random text</h1>
-          <h2>Countdown: { this.state.isPaused ? "test" : 20 }</h2>
+          <h2>Countdown:</h2>
           <div>
             <input type="text" onChange={ this.setSeconds } value={ this.state.timeLeft } />
           </div>
