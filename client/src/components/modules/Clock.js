@@ -6,8 +6,8 @@ class Clock extends Component {
       super(props);
       this.state = { 
         timeLeft: 20,
-        paused: true,
-       };
+        isPaused: true,
+      };
       this.tick = this.tick.bind(this);
     }
   
@@ -22,7 +22,7 @@ class Clock extends Component {
   
     tick() {
         this.interval = setInterval(() => {
-            if (this.state.timeLeft > 0 && (this.state.paused)) {
+            if (this.state.timeLeft > 0 && (this.state.isPaused)) {
                 this.setState(prevState => ({
                     timeLeft: prevState.timeLeft-1
                 }));
@@ -31,14 +31,10 @@ class Clock extends Component {
         }, 1000);
     }
 
-    negPause() {
-      this.setState({
-        paused: !(this.state.paused)
-      } );
-    }
-
-    stopTimer = () => {
-      clearInterval(this.state.timeLeft)
+    negPause = (e) => {
+      this.setState(prevState => ({
+        isPaused: !(this.state.isPaused)
+      }));
     }
 
     setSeconds = (e) => {
@@ -51,12 +47,12 @@ class Clock extends Component {
       return (
         <div className="full-page">
           <h1>random text</h1>
-          <h2>Countdown:</h2>
+          <h2>Countdown: { this.state.isPaused ? "test" : 20 }</h2>
           <div>
             <input type="text" onChange={ this.setSeconds } value={ this.state.timeLeft } />
           </div>
           <button onClick={this.tick} type="button" class="btn btn-primary">Start Bonus</button>
-          <button onClick={this.stopTimer} type="button" class="btn btn-danger">Stop Bonus</button>
+          <button onClick={this.negPause} type="button" class="btn btn-danger">Stop Bonus</button>
         </div>
       );
     }
