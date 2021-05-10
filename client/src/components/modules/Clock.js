@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
 
+import "./Clock.css";
+
 class Clock extends Component {
     constructor(props) {
       super(props);
@@ -82,13 +84,12 @@ class Clock extends Component {
       return (
         <div className="full-page">
           <h1>random text</h1>
-          <h2>Countdown:</h2>
-          <div>
-            <input type="text" onChange={ this.setSeconds } value={ this.state.timeLeft } />
+          <div className="float-container">
+            <h2>Countdown: <input type="number" onChange={ this.setSeconds } value={ this.state.timeLeft } className="questionClock"/></h2>
+            <button onClick={this.startTossup} type="button" class="btn btn-primary">Start Tossup</button>
+            <button onClick={this.startBonus} type="button" class="btn btn-danger">Start Bonus</button>
+            <button onClick={this.negPause} type="button" class="btn btn-warning">Pause/Play</button>
           </div>
-          <button onClick={this.startTossup} type="button" class="btn btn-primary">Start Tossup</button>
-          <button onClick={this.startBonus} type="button" class="btn btn-danger">Start Bonus</button>
-          <button onClick={this.negPause} type="button" class="btn btn-warning">Pause/Play</button>
         </div>
       );
     }

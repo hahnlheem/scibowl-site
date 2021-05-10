@@ -28,13 +28,13 @@ class Input extends Component {
 				
 				<div class="float-container">
 					<p>Question Type: 
-						<select value={this.state.questionType} onChange={this.handleQuestionChange}>
+						<select value={this.state.questionType} onChange={this.handleQuestionChange} className="dropdown">
 							<option value="Toss-up">Toss-up</option>
 							<option value="Bonus">Bonus</option>
 						</select>
 					</p>
 					<p>Subject: 
-						<select>{this.state.subjects.map(list => (
+						<select className="dropdown">{this.state.subjects.map(list => (
 							<option key={list} value={list}>
 								{list}
 							</option>
@@ -42,7 +42,7 @@ class Input extends Component {
 						</select>
 					</p>
 					<p>Responder: 
-						<select>{this.state.roster.map(list => (
+						<select className="dropdown">{this.state.roster.map(list => (
 							<option key={list} value={list}>
 								{list}
 							</option>

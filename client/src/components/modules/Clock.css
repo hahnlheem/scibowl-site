@@ -2,3 +2,13 @@
     width: 100%;
     margin: auto;
 }
+
+.questionClock {
+    border-radius: 5px;
+    border-width: 2px;
+    width: 150px;
+    height: 60px;
+    text-align: center;
+    font-size: 45px;
+    padding-left: 18px;
+}
