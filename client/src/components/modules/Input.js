@@ -10,18 +10,40 @@ class Input extends Component {
         this.state = {
             questionType: "",
             subject: "",
-            correct: True,
+            correct: true,
             responder: "",
         }
+    }
+
+    changeToTossup = (e) => {
+        this.setState({
+            questionType : "Tossup"
+          });
+    }
+
+    changeToBonus = (e) => {
+        this.setState({
+            questionType : "Bonus"
+          });
     }
 
     render() {
         return (
             <span className="full-page">
                 <div class="float-container">
-                    
+                    <h2>Question Type: {this.state.questionType}</h2>
+                    <div class="dropdown">
+                        <button class="dropbtn">Question Type</button>
+                        <div class="dropdown-content">
+                            <button onClick={this.changeToTossup} type="button">Toss-up</button>
+                            <button onClick={this.changeToBonus} type="button">Bonus</button>
+                        </div>
+                    </div>
                 </div>
             </span>
         )
     }
 }
+
+export default Input;
+

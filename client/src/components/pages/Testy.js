@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "@reach/router";
 import Clock from "../modules/Clock.js";
 import Scoreboard from "../modules/Scoreboard.js";
+import Input from "../modules/Input.js";
 
 import "../../utilities.css";
 import "./Testy.css";
@@ -28,6 +29,7 @@ class Testy extends Component {
 
           <Clock/>
           <Scoreboard/>
+          <Input/>
         </div>
       </>
     );
