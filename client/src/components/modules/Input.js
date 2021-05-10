@@ -1,4 +1,5 @@
 import React, { Component, useState } from "react";
+
 import { Link } from "@reach/router";
 import Editable from "../Editable.js";
 
@@ -12,33 +13,40 @@ class Input extends Component {
             subject: "",
             correct: true,
             responder: "",
+            roster: ["hahn", "melissa", "alvin"],
+            subjects: ["Biology", "Chemistry", "Physics", "ESS", "Math", "Energy"],
         }
     }
 
-    changeToTossup = (e) => {
-        this.setState({
-            questionType : "Tossup"
-          });
-    }
-
-    changeToBonus = (e) => {
-        this.setState({
-            questionType : "Bonus"
-          });
-    }
+    handleQuestionChange = (e) => {
+        this.setState({ questionType: e.target.value });
+    };
 
     render() {
         return (
             <span className="full-page">
+                
                 <div class="float-container">
-                    <h2>Question Type: {this.state.questionType}</h2>
-                    <div class="dropdown">
-                        <button class="dropbtn">Question Type</button>
-                        <div class="dropdown-content">
-                            <button onClick={this.changeToTossup} type="button">Toss-up</button>
-                            <button onClick={this.changeToBonus} type="button">Bonus</button>
-                        </div>
-                    </div>
+                    <p>Question Type: 
+                        <select value={this.state.questionType} onChange={this.handleQuestionChange}>
+                            <option value="Toss-up">Toss-up</option>
+                            <option value="Bonus">Bonus</option>
+                        </select>
+                    </p>
+                    <p>Subject: 
+                        <select>{this.state.subjects.map(list => (<option key={list} value={list}>
+                            {list}
+                        </option>
+                        ))}
+                        </select>
+                    </p>
+                    <p>Responder: 
+                        <select>{this.state.roster.map(list => (<option key={list} value={list}>
+                            {list}
+                        </option>
+                        ))}
+                        </select>
+                    </p>
                 </div>
             </span>
         )
