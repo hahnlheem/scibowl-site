@@ -3,7 +3,8 @@
     background-color: var(--primary);
   }
   
-  .NavBar-title {
+  .NavBar-title,
+  .NavBar-title:visited {
     color: var(--white);
     font-size: 20px;
   }
