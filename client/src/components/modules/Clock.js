@@ -27,7 +27,7 @@ class Clock extends Component {
       this.interval = setInterval(() => {
           if (this.state.timeLeft > 0 && !(this.state.isPaused)) {
               this.setState(prevState => ({
-                  timeLeft: prevState.timeLeft-1
+                  timeLeft: parseInt(prevState.timeLeft)-1
               }));
           }
           
@@ -47,14 +47,10 @@ class Clock extends Component {
       });
       if (!this.state.isStartPressed) {
         this.tick();
-        this.setState({
-          isStartPressed: true
-        });
-      } else{
-        this.setState({
-          isStartPressed: true
-        });
       }
+      this.setState({
+        isStartPressed: true
+      });
     }
 
     startTossup = (e) => {
@@ -64,14 +60,10 @@ class Clock extends Component {
       });
       if (!this.state.isStartPressed) {
         this.tick();
-        this.setState({
-          isStartPressed: true
-        });
-      } else{
-        this.setState({
-          isStartPressed: true
-        });
       }
+      this.setState({
+        isStartPressed: true
+      });
     }
 
     setSeconds = (e) => {
