@@ -103,7 +103,8 @@ class Clock extends Component {
       });
     }
 
-    setHalfTime = (e) => { // split by :
+    setHalfTime = (e) => { // split by :, need to fix this
+      // might be some problem with defining halfTimeSecond in render()
       this.setState({
         halfTime: e.target.value
       });
