@@ -3,6 +3,7 @@ import { Link } from "@reach/router";
 import Clock from "../modules/Clock.js";
 import Scoreboard from "../modules/Scoreboard.js";
 import Input from "../modules/Input.js";
+import Table from "../modules/Table.js";
 
 import "../../utilities.css";
 import "./Testy.css";
@@ -30,6 +31,7 @@ class Testy extends Component {
           <Clock/>
           <Scoreboard/>
           <Input/>
+          <Table/>
         </div>
       </>
     );

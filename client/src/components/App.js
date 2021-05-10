@@ -4,6 +4,8 @@ import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
 import Testy from "./pages/Testy.js";
 import NavBar from "./modules/NavBar.js";
+import NewGame from "./pages/NewGame.js";
+import PastGames from "./pages/PastGames.js";
 
 import "../utilities.css";
 import "./App.css";
@@ -62,6 +64,8 @@ class App extends Component {
               userId={this.state.userId}
             />
             <Testy path="/testy"/>
+            <NewGame path="/NewGame"/>
+            <PastGames path="/PastGames"/>
             <NotFound default />
           </Router>
         </div>

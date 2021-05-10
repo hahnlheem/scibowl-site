@@ -22,6 +22,12 @@ class NavBar extends Component {
           <Link to="/testy/" className="NavBar-link">
             Testy
           </Link>
+          <Link to="/NewGame/" className="NavBar-link">
+            New Game
+          </Link>
+          <Link to="/PastGames/" className="NavBar-link">
+            Past Games
+          </Link>
         </div>
       </nav>
     );

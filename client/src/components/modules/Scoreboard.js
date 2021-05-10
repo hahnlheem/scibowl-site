@@ -36,46 +36,46 @@ class Scoreboard extends Component {
     // }
     increaseBy4A = () => {
       this.setState({
-        teamA : this.state.teamA + 4
+        teamA : parseInt(this.state.teamA) + 4
       })
     }
   
     decreaseBy4A = () => {
       this.setState({
-        teamA : this.state.teamA - 4
+        teamA : parseInt(this.state.teamA) - 4
       })
     }
     increaseBy10A = () => {
       this.setState({
-        teamA : this.state.teamA + 10
+        teamA : parseInt(this.state.teamA) + 10
       })
     }
   
     decreaseBy10A = () => {
       this.setState({
-        teamA : this.state.teamA - 10
+        teamA : parseInt(this.state.teamA) - 10
       })
     }
     increaseBy4B = () => {
       this.setState({
-        teamB : this.state.teamB + 4
+        teamB : parseInt(this.state.teamB) + 4
       })
     }
   
     decreaseBy4B = () => {
       this.setState({
-        teamB : this.state.teamB - 4
+        teamB : parseInt(this.state.teamB) - 4
       })
     }
     increaseBy10B = () => {
       this.setState({
-        teamB : this.state.teamB + 10
+        teamB : parseInt(this.state.teamB) + 10
       })
     }
   
     decreaseBy10B = () => {
       this.setState({
-        teamB : this.state.teamB - 10
+        teamB : parseInt(this.state.teamB) - 10
       })
     }
     resetScores = () => {
@@ -84,6 +84,16 @@ class Scoreboard extends Component {
         teamB : 0
       })
     }
+    setTeamA = (e) => {
+      this.setState({
+        teamA: e.target.value
+      });
+    };
+    setTeamB = (e) => {
+      this.setState({
+        teamB: e.target.value
+      });
+    };
 
 
     render() {
@@ -91,7 +101,7 @@ class Scoreboard extends Component {
         <span className="full-page">
           <div class="float-container">
             <div class="float-child">
-              <h2>Team A Score: {this.state.teamA}</h2>
+              <h2>Team A Score: <input type="number" onChange={ this.setTeamA } value={ this.state.teamA } /></h2>
               <div className="u-inlineBlock center">
                   <button onClick={this.increaseBy4A} type="button" className="btn btn-primary score-button">+4</button>
                   <button onClick={this.decreaseBy4A} type="button" class="btn btn-primary score-button">-4</button>
@@ -100,7 +110,7 @@ class Scoreboard extends Component {
               </div>
             </div> 
             <div class="float-child">
-              <h2>Team B Score: {this.state.teamB}</h2>
+              <h2>Team B Score: <input type="text" onChange={ this.setTeamB } value={ this.state.teamB } /></h2>
               <div className="center">
                 <button onClick={this.increaseBy4B} type="button" class="btn btn-primary score-button">+4</button>
                 <button onClick={this.decreaseBy4B} type="button" class="btn btn-primary score-button">-4</button>

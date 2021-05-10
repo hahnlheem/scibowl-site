@@ -14,6 +14,7 @@ To initialize, run ```npm install``` to install ```node_modules``` (do this only
 - Create a table that keeps track of problem number
 - keyboard shortcuts for starting things
 - Potential idea: have separate customizable settings that are seen at the beginning of a game
+- We need to add an "end game" button that stores the game information into the storage page
 
 Note that we won't deal with buzzer systems for now, as this site is largely for moderator use. (Good sites for buzzing include https://coba-cc.slapbowl.com/.
 
