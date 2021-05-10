@@ -99,18 +99,18 @@ class Scoreboard extends Component {
     render() {
       return (
         <span className="full-page">
-          <div class="float-container">
-            <div class="float-child">
-              <h2>Team A Score: <input type="number" onChange={ this.setTeamA } value={ this.state.teamA } /></h2>
+          <div className="float-container">
+            <div className="float-child">
+              <h2>Team A Score: <input type="number" onChange={ this.setTeamA } value={ this.state.teamA } className="scorebox"/></h2>
               <div className="u-inlineBlock center">
-                  <button onClick={this.increaseBy4A} type="button" className="btn btn-primary score-button">+4</button>
+                  <button onClick={this.increaseBy4A} type="button" class="btn btn-primary score-button">+4</button>
                   <button onClick={this.decreaseBy4A} type="button" class="btn btn-primary score-button">-4</button>
                   <button onClick={this.increaseBy10A} type="button" class="btn btn-primary score-button">+10</button>
                   <button onClick={this.decreaseBy10A} type="button" class="btn btn-primary score-button">-10</button>
               </div>
             </div> 
-            <div class="float-child">
-              <h2>Team B Score: <input type="text" onChange={ this.setTeamB } value={ this.state.teamB } /></h2>
+            <div className="float-child">
+              <h2>Team B Score: <input type="number" onChange={ this.setTeamB } value={ this.state.teamB } className="scorebox"/></h2>
               <div className="center">
                 <button onClick={this.increaseBy4B} type="button" class="btn btn-primary score-button">+4</button>
                 <button onClick={this.decreaseBy4B} type="button" class="btn btn-primary score-button">-4</button>

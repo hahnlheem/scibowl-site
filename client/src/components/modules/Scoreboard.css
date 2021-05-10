@@ -10,10 +10,12 @@
     margin: auto;
 }
 
-.teamScore {
-    display: inline-block;
-    width: 80%;
-    border-color: black;
+.scorebox {
+    border-radius: 5px;
+    border-width: 2px;
+    width: 100px;
+    text-align: center;
+    padding-left: 18px;
 }
 
 .full-page {
