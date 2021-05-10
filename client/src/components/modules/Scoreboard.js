@@ -89,22 +89,24 @@ class Scoreboard extends Component {
     render() {
       return (
         <span className="full-page">
-          <div className="teamScore">
-            <h2>Team A Score: {this.state.teamA}</h2>
-            <div className="u-inlineBlock center">
-                <button onClick={this.increaseBy4A} type="button" className="btn btn-primary score-button">+4</button>
-                <button onClick={this.decreaseBy4A} type="button" class="btn btn-primary score-button">-4</button>
-                <button onClick={this.increaseBy10A} type="button" class="btn btn-primary score-button">+10</button>
-                <button onClick={this.decreaseBy10A} type="button" class="btn btn-primary score-button">-10</button>
-            </div>
-          </div> 
-          <div className="teamScore">
-            <h2>Team B Score: {this.state.teamB}</h2>
-            <div className="center">
-              <button onClick={this.increaseBy4B} type="button" class="btn btn-primary score-button">+4</button>
-              <button onClick={this.decreaseBy4B} type="button" class="btn btn-primary score-button">-4</button>
-              <button onClick={this.increaseBy10B} type="button" class="btn btn-primary score-button">+10</button>
-              <button onClick={this.decreaseBy10B} type="button" class="btn btn-primary score-button">-10</button>
+          <div class="float-container">
+            <div class="float-child">
+              <h2>Team A Score: {this.state.teamA}</h2>
+              <div className="u-inlineBlock center">
+                  <button onClick={this.increaseBy4A} type="button" className="btn btn-primary score-button">+4</button>
+                  <button onClick={this.decreaseBy4A} type="button" class="btn btn-primary score-button">-4</button>
+                  <button onClick={this.increaseBy10A} type="button" class="btn btn-primary score-button">+10</button>
+                  <button onClick={this.decreaseBy10A} type="button" class="btn btn-primary score-button">-10</button>
+              </div>
+            </div> 
+            <div class="float-child">
+              <h2>Team B Score: {this.state.teamB}</h2>
+              <div className="center">
+                <button onClick={this.increaseBy4B} type="button" class="btn btn-primary score-button">+4</button>
+                <button onClick={this.decreaseBy4B} type="button" class="btn btn-primary score-button">-4</button>
+                <button onClick={this.increaseBy10B} type="button" class="btn btn-primary score-button">+10</button>
+                <button onClick={this.decreaseBy10B} type="button" class="btn btn-primary score-button">-10</button>
+              </div>
             </div>
           </div>
           <br>

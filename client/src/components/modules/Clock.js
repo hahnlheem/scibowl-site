@@ -5,7 +5,7 @@ class Clock extends Component {
     constructor(props) {
       super(props);
       this.state = { 
-        timeLeft: 20,
+        timeLeft: 0,
         isPaused: true,
         isStartPressed: false,
       };
