@@ -33,4 +33,10 @@
     float: left;
     padding: 20px;
     border: 2px solid red;
-}  
+} 
+
+.table {
+	width:100%;
+	border:1px solid $color-form-highlight;
+}
+

@@ -25,7 +25,7 @@ export class Table extends Component {
       return (
         <div>
             <h2>This is where the table is going  to be but i'm lazee right now</h2>
-            <table>
+            <table className="table">
                 {/* Help i have no clue how to format a table */}
                 <tr>
                     <th>Problem Number</th>

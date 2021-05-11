@@ -151,6 +151,7 @@ class Clock extends Component {
           </div>
           <audio className="audio-element">
             <source src="https://assets.coderrocketfuel.com/pomodoro-times-up.mp3"></source>
+            {/* <source src="timeUp.mp3"></source> */}
             {/* I want to change this to our own timeUp mp3 thing but it doesn't work right now if i do that oops lmao */}
           </audio>
         </div>
