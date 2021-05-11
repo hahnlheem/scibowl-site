@@ -16,9 +16,10 @@ class Clock extends Component {
       };
     }
   
-    // componentDidMount() {
-    //   this.timerID = 0;
-    // }
+    componentDidMount() {
+      const audioEl = document.getElementsByClassName("audio-element")[0]
+      audioEl.play()  
+    }
   
     // componentWillUnmount() {
     //   clearInterval(this.interval);
@@ -121,7 +122,6 @@ class Clock extends Component {
       let isQZero = this.state.isQStartPressed && this.state.questionTime === 0;
       return (
         <div className="full-page">
-          <h1>random text</h1>
           <div className="float-container">
             {/* make these float childs a bit more flexible */}
             <div className="float-child">
@@ -149,6 +149,10 @@ class Clock extends Component {
               <button onClick={this.negQPause} type="button" className="btn btn-warning timerbtn">Pause/Play</button>
             </div>
           </div>
+          <audio className="audio-element">
+            <source src="https://assets.coderrocketfuel.com/pomodoro-times-up.mp3"></source>
+            {/* I want to change this to our own timeUp mp3 thing but it doesn't work right now if i do that oops lmao */}
+          </audio>
         </div>
       );
     }

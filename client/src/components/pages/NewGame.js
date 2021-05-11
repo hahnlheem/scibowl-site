@@ -3,8 +3,10 @@ import { Link } from "@reach/router";
 
 import "../../utilities.css";
 import "./Testy.css";
+import Table from "../modules/Table.js";
 
-class NewGame extends Component {
+
+export class NewGame extends Component {
   constructor(props) {
     super(props);
     // Initialize Default State
@@ -36,6 +38,7 @@ class NewGame extends Component {
   };
 
   render() {
+
     return (
       <>
         <form>
@@ -61,6 +64,7 @@ class NewGame extends Component {
             <br />
             <button>Start my game!</button>
         </form>
+        
       </>
     );
   }

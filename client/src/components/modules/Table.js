@@ -3,7 +3,7 @@ import { Link } from "@reach/router";
 
 import "./Table.css";
 
-class Table extends Component {
+export class Table extends Component {
     constructor(props) {
       super(props);
     //   this.state = {
@@ -37,6 +37,7 @@ class Table extends Component {
                     <td>u</td>
                     <td>w</td>
                     <td>u</td>
+                    <td>{this.props.packet}</td>
                 </tr>
             </table>
             
