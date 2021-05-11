@@ -129,7 +129,7 @@ class Clock extends Component {
                 <input type="text" 
                   onChange={ this.setHalfTime } 
                   value={ Math.floor(this.state.halfTime/60) + ":" + halfTimeSecond } 
-                  className="halfClock"
+                  className={ (this.state.halfTime === 0) ? "halfClockAtZero" : "halfClock" }
                 />
               </h2>
               <button onClick={this.startHalf} type="button" class="btn btn-primary">Start Half</button>

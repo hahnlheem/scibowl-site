@@ -44,3 +44,17 @@
   /* padding-left: 18px; */
   margin-left: 10px;
 }
+
+.halfClockAtZero {
+  border-radius: 5px;
+  border-width: 2px;
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  font-size: 45px;
+  /* padding-left: 18px; */
+  margin-left: 10px;
+  animation-name: flashRed;
+  animation-duration: 1.25s;
+  animation-iteration-count: 4;
+}
