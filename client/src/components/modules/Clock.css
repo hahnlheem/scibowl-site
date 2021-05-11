@@ -14,6 +14,26 @@
     margin-left: 10px;
 }
 
+@keyframes flashRed {
+    0%   {background-color: white;}
+    50%  {background-color: red;}
+    100% {background-color: white;}
+}
+
+.questionClockAtZero {
+    border-radius: 5px;
+    border-width: 2px;
+    width: 150px;
+    height: 60px;
+    text-align: center;
+    font-size: 45px;
+    padding-left: 18px;
+    margin-left: 10px;
+    animation-name: flashRed;
+    animation-duration: 1s;
+    animation-iteration-count: 3;
+}
+
 .halfClock {
   border-radius: 5px;
   border-width: 2px;

@@ -118,6 +118,7 @@ class Clock extends Component {
   
     render() {
       let halfTimeSecond = (this.state.halfTime % 60 > 9) ? (this.state.halfTime % 60) : ("0" + this.state.halfTime % 60);
+      let isQZero = this.state.isQStartPressed && this.state.questionTime === 0;
       return (
         <div className="full-page">
           <h1>random text</h1>
@@ -140,7 +141,7 @@ class Clock extends Component {
                 <input type="number" 
                   onChange={ this.setQSeconds } 
                   value={ this.state.questionTime } 
-                  className="questionClock"
+                  className={ isQZero ? "questionClockAtZero" : "questionClock" }
                 />
               </h2>
               <button onClick={this.startTossup} type="button" class="btn btn-primary">Start Tossup</button>
