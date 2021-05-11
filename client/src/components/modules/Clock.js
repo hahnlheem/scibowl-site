@@ -132,9 +132,9 @@ class Clock extends Component {
                   className={ (this.state.halfTime === 0) ? "halfClockAtZero" : "halfClock" }
                 />
               </h2>
-              <button onClick={this.startHalf} type="button" class="btn btn-primary">Start Half</button>
-              <button onClick={this.negHPause} type="button" class="btn btn-warning">Pause/Play</button>
-              <button onClick={this.resetHalf} type="button" class="btn btn-danger">Reset</button>
+              <button onClick={this.startHalf} type="button" className="btn btn-primary timerbtn">Start Half</button>
+              <button onClick={this.negHPause} type="button" className="btn btn-warning timerbtn">Pause/Play</button>
+              <button onClick={this.resetHalf} type="button" className="btn btn-danger timerbtn">Reset</button>
             </div>
             <div className="float-child">
               <h2>Question Timer: 
@@ -144,9 +144,9 @@ class Clock extends Component {
                   className={ isQZero ? "questionClockAtZero" : "questionClock" }
                 />
               </h2>
-              <button onClick={this.startTossup} type="button" class="btn btn-primary">Start Tossup</button>
-              <button onClick={this.startBonus} type="button" class="btn btn-danger">Start Bonus</button>
-              <button onClick={this.negQPause} type="button" class="btn btn-warning">Pause/Play</button>
+              <button onClick={this.startTossup} type="button" className="btn btn-primary timerbtn">Start Tossup</button>
+              <button onClick={this.startBonus} type="button" className="btn btn-danger timerbtn">Start Bonus</button>
+              <button onClick={this.negQPause} type="button" className="btn btn-warning timerbtn">Pause/Play</button>
             </div>
           </div>
         </div>

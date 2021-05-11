@@ -3,6 +3,10 @@
     margin: auto;
 }
 
+.timerbtn {
+  margin-right: 5px;
+}
+
 .questionClock {
     border-radius: 5px;
     border-width: 2px;
