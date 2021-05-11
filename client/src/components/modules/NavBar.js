@@ -16,9 +16,9 @@ class NavBar extends Component {
       <nav className="NavBar-container">
         <Link to="/" className="NavBar-title u-inlineBlock">Scibowl Site</Link>
         <div className="NavBar-linkContainer u-inlineBlock">
-          <Link to="/" className="NavBar-link">
+          {/* <Link to="/" className="NavBar-link">
             Home
-          </Link>
+          </Link> */}
           <Link to="/testy/" className="NavBar-link">
             Testy
           </Link>
