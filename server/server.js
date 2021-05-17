@@ -33,6 +33,7 @@ const socketManager = require("./server-socket");
 
 // Server configuration below
 // TODO change connection URL after setting up your team database
+// mongodb+srv://hahn:S0T54yHDKcj299KN@cluster0.nahl7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority (weblab)
 const mongoConnectionURL = "mongodb+srv://hahn:S0T54yHDKcj299KN@cluster0.dtqdp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 // TODO change database name to the name you chose
 const databaseName = "FILL ME IN";
