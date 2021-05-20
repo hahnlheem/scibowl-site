@@ -5,13 +5,11 @@ import { Link } from "@reach/router";
 import "../../utilities.css";
 
 //TODO: REPLACE WITH YOUR OWN CLIENT_ID
-const GOOGLE_CLIENT_ID = "121479668229-t5j82jrbi9oejh7c8avada226s75bopn.apps.googleusercontent.com";
+const GOOGLE_CLIENT_ID = "738182777388-hs65jinmb9l3bu27r2c9gcjt2gbpb7fh.apps.googleusercontent.com";
 
 class Skeleton extends Component {
   constructor(props) {
     super(props);
-    // Initialize Default State
-    this.state = {};
   }
 
   componentDidMount() {
@@ -55,12 +53,7 @@ class Skeleton extends Component {
             <li>Implement a timer</li>
             <li>Style things along the way</li>
             <li>Make + add a favicon at the path client/dist/favicon.ico</li>
-            <button onClick={this.hello}> 
-              this button is trying to access the hello() function but it's not working -_-
-            </button>
-            
           </ul>
-          <Link to="/testy">goes to testy?</Link>
         </div>
       </div>
     );
