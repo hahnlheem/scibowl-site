@@ -38,9 +38,25 @@ router.post("/initsocket", (req, res) => {
   res.send({});
 });
 
-// |------------------------------|
-// | write your API methods below!|
-// |------------------------------|
+// API methods
+
+router.get("/user", (req, res) => {
+  User.findById(req.query.userid).then((user) => {
+    res.send(user);
+  });
+});
+
+router.post("/login", auth.login);
+router.post("/logout", auth.logout);
+
+router.get("/whoami", (req, res) => {
+  if (req.user) {
+    res.send(req.user);
+  } else {
+    // user is not logged in
+    res.send({});
+  }
+});
 
 // anything else falls to this "not found" case
 router.all("*", (req, res) => {
