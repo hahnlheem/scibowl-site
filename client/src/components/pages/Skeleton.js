@@ -1,19 +1,21 @@
 import React, { Component } from "react";
 import GoogleLogin, { GoogleLogout } from "react-google-login";
+import { get } from "../../utilities";
 import { Link } from "@reach/router";
 
 import "../../utilities.css";
 
-//TODO: REPLACE WITH YOUR OWN CLIENT_ID
 const GOOGLE_CLIENT_ID = "738182777388-hs65jinmb9l3bu27r2c9gcjt2gbpb7fh.apps.googleusercontent.com";
 
 class Skeleton extends Component {
   constructor(props) {
     super(props);
+    this.state = { }; // empty to allow user to be added later
   }
 
   componentDidMount() {
-    // remember -- api calls go here!
+    document.title = "Home Page";
+    get(`/api/user`, { userid: this.props.userId }).then((user) => this.setState({ user: user }));
   }
 
   hello() {
@@ -38,7 +40,7 @@ class Skeleton extends Component {
             onFailure={(err) => console.log(err)}
           />
         )}
-        <h1>website in progress :D</h1>
+        <h1>Welcome {this.state.user ? this.state.user.name + "!" : "-- please log in!"}</h1>
         <div className="std-blue">
           <h2>Things to do!</h2>
 
