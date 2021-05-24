@@ -41,6 +41,7 @@ export class NewGame extends Component {
 
     return (
       <>
+        <Table packet={ this.state.packetLink }></Table>
         <form>
             <h1>Starting a new game! Please put your desired settings</h1>
             <label>Packet:<input onChange={ this.setPacket } value={ this.state.packetLink }></input></label> {/* optional, just stores some text */}
