@@ -37,6 +37,6 @@
 
 .table {
 	width:100%;
-	border:1px solid $color-form-highlight;
+	border:1px solid color-form-highlight;
 }
 
