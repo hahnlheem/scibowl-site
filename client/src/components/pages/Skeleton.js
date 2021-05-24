@@ -10,7 +10,9 @@ const GOOGLE_CLIENT_ID = "738182777388-hs65jinmb9l3bu27r2c9gcjt2gbpb7fh.apps.goo
 class Skeleton extends Component {
   constructor(props) {
     super(props);
-    this.state = { }; // empty to allow user to be added later
+    this.state = {
+      user: null
+    }; // empty to allow user to be added later
   }
 
   componentDidMount() {
