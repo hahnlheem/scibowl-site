@@ -12,26 +12,49 @@ class Testy extends Component {
   constructor(props) {
     super(props);
     // Initialize Default State
-    // this.state = {
-    //   numPoints: 0,
-    // };
+    this.state = {
+      questions: [
+        {
+          number: 1,
+          type: "Bonus",
+          subject: "Chemistry",
+			    correct: true,
+			    responders: {
+            "melissa": "ic",
+            "bojack": "ii",
+          },
+        },
+      ],
+			teams: [
+        {
+          team: "A",
+          players: [0, 1, 2],
+          points: 0,
+        },
+        {
+          team: "B",
+          players: [3, 4],
+          points: 14,
+        },
+      ],
+      allPlayers: ["hahn", "melissa", "alvin", "bojack", "princess carolyn"],
+    };
   }
 
   componentDidMount() {
     // remember -- api calls go here!
   }
-  
-  
 
   render() {
+    
     return (
       <>
         <div className="main-div">
 
-          <Clock/>
-          <Scoreboard/>
-          <Input/>
-          <Table/>
+          <Clock />
+          <Scoreboard />
+          <Input teams={this.state.teams} allPlayers={this.state.allPlayers}/>
+          <Table />
         </div>
       </>
     );
