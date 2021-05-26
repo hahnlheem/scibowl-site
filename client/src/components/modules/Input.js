@@ -3,20 +3,11 @@ import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import { makeStyles } from '@material-ui/core/styles'
-
-
-import { Link } from "@reach/router";
-import Editable from "../Editable.js";
+import Button from '@material-ui/core/Button'
 
 import "./Input.css";
 import Team from "./TeamTable/Team";
 import Key from "./TeamTable/Key";
-
-const useStyles = makeStyles({
-	root: {
-		
-	}
-})
 
 class Input extends Component {
 	constructor(props) {
@@ -35,6 +26,20 @@ class Input extends Component {
 			type: "Bonus",
 			subject: "Chemistry",
 			responders: responders,
+			root: {
+				display: 'flex',
+				flexDirection: 'column',
+				justifyContent: 'center',
+				alignItems: 'center',
+				padding: '0 30px',
+			'& .MuiTextField-root': {
+				  margin: '0 30px',
+				  width: '300px',
+				},
+			'& .MuiButtonBase-root': {
+				  margin: '0 30px',
+				},
+			  },
 		}
 
 	}
@@ -82,10 +87,17 @@ class Input extends Component {
 		}
 	}
 	render() {
-
 		return (
 			<div>
-				<form className='add-form'>
+				<form className={this.state.root} onSubmit={() => {
+					const question = {
+						"number": this.state.number,
+						"type": this.state.type,
+						"subject": this.state.subject,
+						"responders": this.state.responders,
+					}
+					this.props.saveQuestion(question)
+				}}>
 					<FormControlLabel labelPlacement='start' label="Question Type" control={
 						<ToggleButtonGroup
 						value={this.state.type}
@@ -131,28 +143,11 @@ class Input extends Component {
 					<div>
 						{this.props.teams.map((team) => (<Team team={team} key={team.team} responders={this.state.responders} togglePlayerResponse={this.togglePlayerResponse} resetAllPlayers={this.resetAllPlayers} />))};
 					</div>
-					<input type='submit' value='Save Question' className='btn btn-block' />
+					<Button type='submit' variant='contained'>Save Question
+					</Button> 
 				</form>
 			</div>
 		);
-
-
-		// <form className='add-form' onSubmit={onSubmit}>
-		// 	<p>Question Type:
-		// 			<select value={this.state.questionType} onChange={this.handleQuestionChange} className="dropdown">
-		// 			<option value="Toss-up">Toss-up</option>
-		// 			<option value="Bonus">Bonus</option>
-		// 		</select>
-		// 	</p>
-		// 	<p>Subject:
-		// 			<select className="dropdown">{this.state.subjects.map(list => (
-		// 		<option key={list} value={list}>
-		// 			{list}
-		// 		</option>
-		// 	))}
-		// 		</select>
-		// 	</p>
-		// </form>
 	}
 }
 

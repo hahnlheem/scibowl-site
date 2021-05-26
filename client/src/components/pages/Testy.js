@@ -18,11 +18,12 @@ class Testy extends Component {
           number: 1,
           type: "Bonus",
           subject: "Chemistry",
-			    correct: true,
 			    responders: {
             "melissa": "ic",
             "bojack": "ii",
           },
+          teamA: 0,
+          teamB: 14,
         },
       ],
 			teams: [
@@ -45,6 +46,11 @@ class Testy extends Component {
     // remember -- api calls go here!
   }
 
+  saveQuestion = (question) => {
+    const questions = this.state.questions.push(question)
+    this.setState({ questions: questions })
+  }
+
   render() {
     
     return (
@@ -52,8 +58,8 @@ class Testy extends Component {
         <div className="main-div">
           <Clock />
           <Scoreboard />
-          <Input teams={this.state.teams} allPlayers={this.state.allPlayers}/>
-          <Table />
+          <Input teams={this.state.teams} allPlayers={this.state.allPlayers} saveQuestion={this.saveQuestion} />
+          <Table questions={this.state.questions}/>
         </div>
       </>
     );
