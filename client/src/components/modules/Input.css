@@ -37,6 +37,9 @@
   margin: 5px;
   padding: 3px 7px;
 }
+.player.na {
+  border-left: 5px solid white;
+}
 .player.ic {
   border-left: 5px solid aqua;
 }

@@ -50,7 +50,6 @@ class Testy extends Component {
     return (
       <>
         <div className="main-div">
-
           <Clock />
           <Scoreboard />
           <Input teams={this.state.teams} allPlayers={this.state.allPlayers}/>
