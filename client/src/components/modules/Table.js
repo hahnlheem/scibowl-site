@@ -16,20 +16,6 @@ export class Table extends Component {
       // clearInterval(this.interval);
     }
 
-    populateTable= () => {
-      return this.props.questions.map((question) => {
-        const { number, subject, teamA, teamB } = question
-        return (
-          <tr id={number}>
-            <td>{number}</td>
-            <td>{subject}</td>
-            <td>{teamA}</td>
-            <td>{teamB}</td>
-          </tr>
-        )
-      })
-    }
-
     render() {
       return (
         <div>
@@ -42,7 +28,7 @@ export class Table extends Component {
                       <th>Team A Score</th>
                       <th>Team B Score</th>
                   </tr>
-                  {/* {this.populateTable()} */}
+                  {this.props.populateTable()}
                 </tbody>  
             </table>
         </div>

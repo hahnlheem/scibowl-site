@@ -22,7 +22,7 @@ class Input extends Component {
 		})
 		this.state = {
 			subjects: ["Biology", "Chemistry", "Physics", "ESS", "Math", "Energy"],
-			number: 1,
+			number: this.props.questionNumber,
 			type: "Bonus",
 			subject: "Chemistry",
 			responders: responders,
@@ -47,10 +47,12 @@ class Input extends Component {
 	resetAllPlayers = (team) => {
 		var responders = []
 		const players = this.props.teams.filter((selectedTeam) => selectedTeam.team === team)[0].players
+		console.log(players)
 		for (const id of players) {
 			responders = this.state.responders.map((responder) => responder.id == id ? { ...responder, state: "na" } : responder)
 		}
 		this.setState({ responders: responders })
+		console.log(responders)
 	}
 
 	togglePlayerResponse = (id, currentState) => {
@@ -86,10 +88,15 @@ class Input extends Component {
 			this.setState({ subject: newSubject })
 		}
 	}
+
+	// updateScore = () => {
+		
+	// }
+
 	render() {
 		return (
 			<div>
-				<form className={this.state.root} >
+				<form className={this.state.root} onsubmit="return false">
 					<FormControlLabel labelPlacement='start' label="Question Type" control={
 						<ToggleButtonGroup
 						value={this.state.type}
@@ -135,16 +142,28 @@ class Input extends Component {
 					<div>
 						{this.props.teams.map((team) => (<Team team={team} key={team.team} responders={this.state.responders} togglePlayerResponse={this.togglePlayerResponse} resetAllPlayers={this.resetAllPlayers} />))};
 					</div>
-					<Button type='submit' variant='contained' onClick={() => {
-					const question = {
-						"number": this.state.number,
-						"type": this.state.type,
-						"subject": this.state.subject,
-						"responders": this.state.responders,
-						"teamA": 18,
-						"teamB": 4,
-					}
+					<Button type='submit' variant='contained' onClick={e => {
+						e.preventDefault();
+						
+						if(this.state.type=="Toss-up") {
+							this.setState({ number: parseInt(this.state.number) + 1 })
+							this.props.incrementNumber()
+							console.log(this.props.questionNumber)
+						}
+
+						const question = {
+							"number": this.state.number,
+							"type": this.state.type,
+							"subject": this.state.subject,
+							"responders": this.state.responders,
+							"teamA": 18,
+							"teamB": 4,
+						}
+						console.log(question)
 					this.props.saveQuestion(question)
+					this.resetAllPlayers("A")
+					this.resetAllPlayers("B")
+					console.log(this.props.questionNumber)
 				}}>Save Question
 					</Button> 
 				</form>

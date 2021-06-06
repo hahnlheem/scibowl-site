@@ -13,6 +13,7 @@ class Testy extends Component {
     super(props);
     // Initialize Default State
     this.state = {
+      questionNumber: 1,
       questions: [
         {
           number: 1,
@@ -47,8 +48,29 @@ class Testy extends Component {
   }
 
   saveQuestion = (question) => {
-    const questions = this.state.questions.push(question)
+    const questions = [... this.state.questions, question]
     this.setState({ questions: questions })
+    console.log(this.state.questions)
+  }
+
+  incrementNumber = () => {
+    this.setState({ 
+      questionNumber : parseInt(this.state.questionNumber) + 1
+    }, () => { this.forceUpdate(); })
+  }
+
+  populateTable = () => {
+    return this.state.questions.map((question) => {
+      const { number, subject, teamA, teamB } = question
+      return (
+        <tr id={number}>
+          <td>{number}</td>
+          <td>{subject}</td>
+          <td>{teamA}</td>
+          <td>{teamB}</td>
+        </tr>
+      )
+    })
   }
 
   render() {
@@ -58,8 +80,9 @@ class Testy extends Component {
         <div className="main-div">
           <Clock />
           <Scoreboard />
-          <Input teams={this.state.teams} allPlayers={this.state.allPlayers} saveQuestion={this.saveQuestion} />
-          <Table questions={this.state.questions}/>
+          <Input teams={this.state.teams} allPlayers={this.state.allPlayers} saveQuestion={this.saveQuestion} questionNumber={this.state.questionNumber} incrementNumber = {this.incrementNumber} />
+          {console.log(this.state.questions)}
+          <Table populateTable={this.populateTable}/>
         </div>
       </>
     );
