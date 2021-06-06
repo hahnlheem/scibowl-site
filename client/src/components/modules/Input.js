@@ -89,15 +89,7 @@ class Input extends Component {
 	render() {
 		return (
 			<div>
-				<form className={this.state.root} onSubmit={() => {
-					const question = {
-						"number": this.state.number,
-						"type": this.state.type,
-						"subject": this.state.subject,
-						"responders": this.state.responders,
-					}
-					this.props.saveQuestion(question)
-				}}>
+				<form className={this.state.root} >
 					<FormControlLabel labelPlacement='start' label="Question Type" control={
 						<ToggleButtonGroup
 						value={this.state.type}
@@ -143,7 +135,17 @@ class Input extends Component {
 					<div>
 						{this.props.teams.map((team) => (<Team team={team} key={team.team} responders={this.state.responders} togglePlayerResponse={this.togglePlayerResponse} resetAllPlayers={this.resetAllPlayers} />))};
 					</div>
-					<Button type='submit' variant='contained'>Save Question
+					<Button type='submit' variant='contained' onClick={() => {
+					const question = {
+						"number": this.state.number,
+						"type": this.state.type,
+						"subject": this.state.subject,
+						"responders": this.state.responders,
+						"teamA": 18,
+						"teamB": 4,
+					}
+					this.props.saveQuestion(question)
+				}}>Save Question
 					</Button> 
 				</form>
 			</div>

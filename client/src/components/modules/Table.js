@@ -16,7 +16,7 @@ export class Table extends Component {
       // clearInterval(this.interval);
     }
 
-    populateTable = () => {
+    populateTable= () => {
       return this.props.questions.map((question) => {
         const { number, subject, teamA, teamB } = question
         return (
@@ -30,12 +30,9 @@ export class Table extends Component {
       })
     }
 
-
-
     render() {
       return (
         <div>
-            <h2>This is where the table is going  to be but i'm lazee right now</h2>
             <table id="scoreTable" className="table">
                 {/* Help i have no clue how to format a table */}
                 <tbody>
@@ -45,10 +42,9 @@ export class Table extends Component {
                       <th>Team A Score</th>
                       <th>Team B Score</th>
                   </tr>
-                  {this.populateTable()}
+                  {/* {this.populateTable()} */}
                 </tbody>  
             </table>
-            
         </div>
       );
     }
